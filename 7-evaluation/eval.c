@@ -33,6 +33,7 @@ long eval_op(long x, char* op, long y)
   if (strcmp(op, "-") == 0) {return x - y;}
   if (strcmp(op, "*") == 0) {return x * y;}
   if (strcmp(op, "/") == 0) {return x / y;}
+  return 0;
 }
 
 long eval(mpc_ast_t* t)
@@ -79,7 +80,7 @@ int main(int argc, char** argv) {
       ",
       Number, Operator, Expr, Lispy);
    
-  puts("Lispy Version 0.0.0.0.2");
+  puts("Lispy Version 0.0.0.0.3");
   puts("Press Ctrl+c to Exit\n");
    
   while (1) {
